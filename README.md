@@ -1,4 +1,4 @@
-# colloidal-particle-size-analyzer
+# Colloidal Particle Size Analyzer
 
 ## Resources:
 
