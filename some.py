@@ -6,12 +6,13 @@ def main(argv):
     default_file = 'smarties.png'
     filename = argv[0] if len(argv) > 0 else default_file
     # Loads an image
-    src = cv.imread('./circleimg.png', cv.IMREAD_COLOR)
+    src = cv.imread('./images.png', cv.IMREAD_COLOR)
     # Check if image is loaded fine
     if src is None:
         print ('Error opening image!')
         print ('Usage: hough_circle.py [image_name -- default ' + default_file + '] \n')
         return -1
+
     
     
     gray = cv.cvtColor(src, cv.COLOR_BGR2GRAY)
@@ -23,7 +24,7 @@ def main(argv):
     rows = gray.shape[0]
     circles = cv.HoughCircles(gray, cv.HOUGH_GRADIENT, 1, rows / 8,
                                param1=100, param2=30,
-                               minRadius=0, maxRadius=20)
+                               minRadius=0, maxRadius=60)
                                
     
     
